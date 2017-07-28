@@ -1,0 +1,23 @@
+﻿@model WebApplication4.Models.Employee
+
+
+
+@using (Html.BeginForm("Edit", "Home", "Edit"))
+{
+
+    @Html.LabelFor(a => Model.ID) <text>: &nbsp;</text>
+    @Html.DisplayFor(a => Model.ID)
+    <br />
+
+    @Html.LabelFor(a => Model.Name) <text>: &nbsp;</text>
+    @Html.EditorFor(a => Model.Name)
+    <br />
+    @Html.LabelFor(a => Model.Address) <text>: &nbsp;</text>
+    @Html.EditorFor(a => Model.Address)
+    <br />
+    @Html.LabelFor(a => Model.Age) <text>: &nbsp;</text>
+    @Html.EditorFor(a => Model.Age)
+    <br />
+    <input type="submit" value="Save"> 
+
+}

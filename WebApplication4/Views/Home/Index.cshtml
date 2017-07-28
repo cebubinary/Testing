@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WebApplication4.Models.Employee>
+
+@Html.ActionLink("Create", "Edit")
+<br />
+<text>**********************************</text>
+<br />
+@foreach(var item in Model)
+{
+  
+    @Html.LabelFor(a => item.Name) <text>: &nbsp;</text>
+    @Html.DisplayFor(a => item.Name)
+
+    <br />
+    @Html.LabelFor(a => item.Address) <text>: &nbsp;</text>
+    @Html.DisplayFor(a => item.Address)
+    <br />
+    @Html.LabelFor(a => item.Age) <text>: &nbsp;</text>
+    @Html.DisplayFor(a => item.Age)
+    <br />
+    @Html.ActionLink("Edit","Edit",new {id = item.ID })
+    <text>: &nbsp;</text>
+    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    <br />
+    <text>**********************************</text>
+    <br />
+}
